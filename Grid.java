@@ -1,8 +1,16 @@
 public class Grid {
   private char[][] _grid;
+  private int w, h;
 
   public Grid(int w, int h) {
+    this.w = w;
+    this.h = h;
     _grid = new char[w][h];
+    for (int i = 0; i < w; i++) {
+      for (int j = 0; j < h; j++) {
+        _grid[i][j] = ' ';
+      }
+    }
   }
 
   public char get(int x, int y) {
@@ -19,9 +27,9 @@ public class Grid {
   }
 
   public void printBoard() {
-    for (int i = 0; i < _grid.length; i++) {
-      for (int j = 0; j < _grid[i].length; j++) {
-        System.out.print('|' + _grid[i][j] + '|');
+    for (int i = 0; i < w; i++) {
+      for (int j = 0; j < h; j++) {
+        System.out.print("" + '|' + _grid[i][j] + '|');
       }
       System.out.println();
     }
