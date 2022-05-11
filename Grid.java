@@ -20,7 +20,7 @@ public class Grid {
 
   public void printBoard() {
     for (int i = 0; i < _grid.length; i++) {
-      for (int j = 0; j < _grid[i][1]; j++) {
+      for (int j = 0; j < _grid[i].length; j++) {
         System.out.print('|' + _grid[i][j] + '|');
       }
       System.out.println();
